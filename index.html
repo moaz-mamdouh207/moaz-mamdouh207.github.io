@@ -928,17 +928,28 @@
 
   @media (max-width: 900px) {
     header {
-      padding: 14px 20px;
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.97);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 12px 16px !important;
+      position: fixed !important;
+      top: 0 !important; left: 0 !important; right: 0 !important;
+      z-index: 9999 !important;
+      background: rgba(255,255,255,0.97) !important;
+      backdrop-filter: blur(12px) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      border-bottom: 1px solid rgba(13,27,42,0.1) !important;
     }
-    nav { display: none; }
-    .cv-btn { display: inline-flex; padding: 8px 14px; font-size: 11px; }
+    nav { display: none !important; }
+    .logo-wrap img { height: 38px !important; width: 38px !important; }
+    .cv-btn {
+      display: inline-flex !important;
+      padding: 8px 14px !important;
+      font-size: 11px !important;
+      letter-spacing: 0.05em !important;
+      white-space: nowrap !important;
+    }
     section { padding: 70px 20px; }
     #hero { padding: 0 20px; min-height: 100vh; }
     .hero-inner { flex-direction: column-reverse; gap: 32px; padding-top: 90px; }
