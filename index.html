@@ -985,11 +985,22 @@
     #contact h2 { font-size: clamp(26px, 7vw, 36px); }
   }
   .about-video-wrap {
-    max-width: 700px;
+    max-width: 360px;
     margin: 0 auto;
   }
-  .about-video-wrap .video-placeholder {
-    aspect-ratio: 16/9;
+  .video-embed {
+    position: relative;
+    aspect-ratio: 9/16;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(74,144,196,0.2);
+    box-shadow: 0 24px 60px rgba(13,27,42,0.12);
+  }
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
   .rank-badge {
     display: inline-flex;
@@ -1382,13 +1393,14 @@
     <div class="section-label">About</div>
     <h2>Who I Am</h2>
     <div class="about-video-wrap fade-up">
-        <div class="video-placeholder">
-          <div class="play-btn">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M5 3l11 6-11 6V3z" fill="#7BB5D9"/>
-            </svg>
-          </div>
-          <span class="video-label">Introduction Video — Coming Soon</span>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/GAZpY4GeTZE"
+            title="Introduction Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
   </div>
